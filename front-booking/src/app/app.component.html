@@ -1,0 +1,14 @@
+<div class="container mt-5" *ngIf="!isLoggedIn">
+  <div class="row">
+    <div class="col-5 ml-auto">
+      <app-login></app-login>
+    </div>
+  </div>
+</div>
+
+<ng-container *ngIf="isLoggedIn">
+  <app-navbar></app-navbar>
+  <div class="container">
+    <h3 class="mx-2 text-success text-center"> You have logged in to the system</h3>
+  </div>
+</ng-container>

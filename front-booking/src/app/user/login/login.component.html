@@ -1,0 +1,27 @@
+<div class="card shadow">
+  <div class="card-body">
+    <h3 class="text-success border-bottom mb-2">Login</h3>
+    <div class="d-flex flex-wrap justify-content-between my-3">
+      <h3 class="h6">Social Login</h3>
+      <div class="d-inline-block align-middle">
+        <a href="#" class="text-success mx-2" (click)="signInWithFB()"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-success" (click)="signInWithGoogle()"><i class="bi bi-google"></i></a>
+      </div>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" formControlName="username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" formControlName="password">
+      </div>
+
+      <div class="pt-4 d-flex flex-wrap justify-content-between border-top" >
+        <small class="text-muted ">Need an Account? <a class="text-success pointer">Sign Up</a></small>
+        <button class="btn btn-success ">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
